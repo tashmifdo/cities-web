@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainable Cities</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .splash {
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            background: #4c5caf;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: white;
+            text-align: center;
+            animation: fadeOut 3s forwards 2.5s;
+        }
+        .splash h1 {
+            font-size: 2.5rem;
+            animation: slideIn 1.5s ease-in-out;
+        }
+        .splash p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes fadeOut {
+            to { opacity: 0; visibility: hidden; }
+        }
+        .content {
+            display: none;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="splash">
+        <h1>Sustainable Cities or web name</h1>
+        <p>Building greener, smarter, and more livable urban spaces or etc:</p>
+    </div>
+    <div class="content">
+        <h2>Main Website</h2>
+        <p>Explore the future of sustainable urban living.</p>
+    </div>
+    <script>
+        setTimeout(() => {
+            document.querySelector(".splash").style.display = "none";
+            document.querySelector(".content").style.display = "block";
+        }, 3000);
+    </script>
+</body>
+</html>
